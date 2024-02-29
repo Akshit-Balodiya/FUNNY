@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+<style>
+    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        font-size: 48px;
+        margin-top: 100px;
+    }
+    button{
+        margin: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    #video-container {
+        display: none;
+    }
+</style>
+</head>
+<body class="content">
+    <h1>
+        Do You Love Me <span id="emoji">💗💗</span>?
+    </h1>
+    <button onclick="playVideo()">Yes</button>
+    <button onclick="playVideo()">No</button>
+    <div id="video-container">
+        <video src="https://youtube.com/shorts/WN6ixMemZWY?si=QYzLde4Ao7tjmSEc" controls> </video>
+    </div>
+    <div id="video-container">
+        <video src="https://youtube.com/shorts/f2XuoqdTTmU?si=7c4tSvIaW8WKrZnT" controls>
+  </div>
+    <p id="message"></p>
+    <script>
+        function playVideo() {
+            document.getElementById('video-container').style.display="block";
+            var message = "You answered: Yes";
+            document.getElementById('message').innerText=message;
+        }
+        function showMessage(answer){
+            var message = "You answered:" + answer;
+            document.getElementById('message').innerText = message;
+        }
+    </script>
+
+</body>
+</html>
